@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Wave animation for square</title>
+        <style>
+            .rect {
+                position: fixed;
+                top: 200;
+                transform: rotate(80deg);
+                left: 500;
+            }
+
+            .square{
+                position: absolute;
+                opacity: .4;
+                width: 400px;
+                height: 400px;
+                margin-left: -150px;
+                margin-top: -250px;
+                border:radius 8px;
+            }
+
+            .square.-one{
+                animation: rotate 7000ms infinite linear;
+                opacity: .4;
+                background-color: blue;
+            }
+            .square.-two{
+                animation: rotate 4000ms infinite linear;
+                opacity: .4;
+                background-color: red
+            }
+            .square.-three{
+                animation: rotate 7500ms infinite linear;
+                opacity: .4;
+                background-color: green;
+            }
+
+            @keyframes rotate {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(180deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="rect">
+            <div class="square -one">First Square</div>
+            <div class="square -two">Second Square</div>
+            <div class="square -three">Third Square</div>
+            <h4>Square</h4>
+        </div>
+    </body>
+</html>
